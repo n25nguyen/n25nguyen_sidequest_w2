@@ -5,7 +5,7 @@ let blob = {
   y: 160, // centre of the canvas
 
   // Base size and shape resolution
-  r: 100, // Base radius of the blob
+  r: 28, // Base radius of the blob
   points: 48, // Number of vertices around the circle (higher = smoother)
 
   // Shape deformation settings
@@ -23,11 +23,11 @@ function setup() {
 
   // Text settings for on-screen instructions
   textFont("sans-serif");
-  textSize(20);
+  textSize(14);
 }
 
 function draw() {
-  background(200);
+  background(240);
 
   // --- Animate over time ---
   // Increment time so noise() changes smoothly every frame
