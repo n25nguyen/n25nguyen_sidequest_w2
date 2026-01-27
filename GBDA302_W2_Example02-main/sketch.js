@@ -8,31 +8,31 @@ let blob2 = {
   y: 0,
 
   // Visual properties
-  r: 26, // Base radius of the blob
-  points: 5, // Number of points used to draw the blob shape
-  wobble: 15, // How much the blob's edge can deform
-  wobbleFreq: 0.9, // Controls how smooth or noisy the wobble is
+  r: 24, // Base radius of the blob
+  points: 14, // Number of points used to draw the blob shape
+  wobble: 24, // How much the blob's edge can deform
+  wobbleFreq: 2.0, // Controls how smooth or noisy the wobble is
 
   // Time values for animation
   t: 0, // Time offset for noise animation
-  tSpeed: 0.01, // How fast the blob "breathes"
+  tSpeed: 0.06, // How fast the blob "breathes"
 
   // Velocity (speed)
   vx: 0, // Horizontal velocity
   vy: 0, // Vertical velocity
 
   // Movement tuning
-  accel: 0.5, // How quickly the blob accelerates left/right
-  maxRun: 4.0, // Maximum horizontal speed
-  gravity: 0.6, // Constant downward force
-  jumpV: -10.5, // Initial upward velocity when jumping
+  accel: 0.9, // How quickly the blob accelerates left/right
+  maxRun: 5.5, // Maximum horizontal speed
+  gravity: 2.0, // Constant downward force
+  jumpV: -20.5, // Initial upward velocity when jumping
 
   // State flags
   onGround: false, // Tracks whether the blob is touching the floor
 
   // Friction values
-  frictionAir: 0.995, // Less friction while in the air
-  frictionGround: 0.88, // More friction while on the ground
+  frictionAir: 0.998, // Less friction while in the air
+  frictionGround: 0.92, // More friction while on the ground
 };
 
 function setup() {
@@ -117,7 +117,7 @@ function draw() {
 
 // Draws a soft, organic blob using Perlin noise
 function drawBlob(b) {
-  fill(20, 120, 255);
+  fill(155, 80, 255);
   beginShape();
 
   // Loop around a full circle
@@ -128,8 +128,8 @@ function drawBlob(b) {
     // Sample Perlin noise using the angle and time
     // This creates smooth, animated deformation
     const n = noise(
-      cos(a) * b.wobbleFreq + 100,
-      sin(a) * b.wobbleFreq + 100,
+      cos(a) * b.wobbleFreq + 200,
+      sin(a) * b.wobbleFreq + 200,
       b.t,
     );
 
