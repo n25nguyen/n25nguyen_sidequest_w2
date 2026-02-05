@@ -6,13 +6,13 @@ GBDA302 Week 2 Example 3: Platforms (AABB Collisions)
 
 ## Authors
 
-Karen Cochrane and David Han
+Karen Cochrane and David Han and Nat Nguyen
 
 ---
 
 ## Description
 
-Adds several rectangular platforms. The blob is drawn as a noisy circle but collides using a simple axis-aligned bounding box (AABB). X and Y are resolved separately to keep behaviour predictable and teachable.
+Adds several rectangular platforms. The blob is drawn as a noisy circle but collides using a simple axis-aligned bounding box (AABB). X and Y are resolved separately to keep behaviour predictable and teachable. The blob now represents a panic emotion - being more jittery, spiky, and purple.
 
 ---
 
